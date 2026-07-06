@@ -14,6 +14,10 @@ const person={
 }
 console.log(person.hobbies[1]);
 
+//DESTRUCTURING OBJECTS
+const {firstname,lastname}=person
+const [state,setState]= useState(initialState) //REACT ARRAY DESTRUCTURING
+
 //ARRAY OF OBJECTS (syntax similar to JSON, but json has " " around everything "id":"1")
 const todos=[
     {
@@ -31,6 +35,17 @@ const todos=[
 //JSON - fromat used to pass data in APIs
 const todosJSON=JSON.stringify(todos);
 console.log(todosJSON);
+
+//SPREAD
+const array=['a','b'];
+const newarray=array;
+newarray.push('c');
+console.log(array);
+console.log(newarray); //BOTH ARRAYS BECOME a,b,c
+
+//instead, use SPREAD OPERATOR
+const arr=['a','b'];
+const newarr=[...arr,'c','d']; //same appplies to objects
 
 //FOREACH
 todos.forEach(function(todo){

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        let person={
+            name:"ayati",
+            age:10
+        }
+
+        person=JSON.stringify(person);
+        console.log(person);
+        
+        person=JSON.parse(person);
+        console.log(person);
+    </script>
+    
+</body>
+</html>

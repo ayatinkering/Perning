@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises JS</title>
+</head>
+<body>
+    <h1>PROMISES are used to fetch data from APIs </h1>
+    <h3>JS single threaded(can only do 1 thing at a time)</h3>
+    <h4>Asynchronous code, start a thing that will take some time, instead of waiting, rest of code cotninues. when slow thing is RESOLVED then continue it</h4>
+    <p>promise has 3 states: pending (ongoing), after finishes either FULFILLED or REJECTED</p>
+    <script>
+        const testPromise=new Promise((resolve,reject)=>{ //function EXECUTOR
+            const res=5+5;
+            if(res===0){
+                resolve('fulfilled'); //if operation successful, resolve promise
+            }else{
+                reject('message: "something went wrong"'); //reject the promise
+            }
+        });
+
+        testPromise.then(message=>{ 
+            console.log(message); //if everything worked
+        }).catch(message=>{
+            console.log(message); //error message, if promise was rejected
+        }).finally((message)=>{
+            console.log("done");
+        })
+
+        async function myFunction(){
+            try{
+                console.log('a');
+                const response=await testPromise;
+            } catch(error){
+                //handle error
+            } finally{
+                //run once finishes
+            }
+        }
+    </script>
+</body>
+</html>

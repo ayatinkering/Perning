@@ -1,0 +1,24 @@
+//running tests to emulate user actions
+
+### 
+GET http://localhost:5000
+
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username":"gilgamesh@gmail.com",
+    "password":"123123"
+}
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username":"gilgamesh@gmail.com",
+    "password":"123123"
+}
+
+###

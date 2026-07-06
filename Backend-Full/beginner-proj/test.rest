@@ -1,0 +1,19 @@
+//emulate process of senidng out netowrk request by browser
+//instead of using NETWORK tap in devtools
+
+### Get Dashboard
+GET http://localhost:8383/
+
+### Get Data
+GET http://localhost:8383/api/data
+
+### Create User
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "gilgamesh"
+}
+
+### delete user
+DELETE http://localhost:8383/api/data
